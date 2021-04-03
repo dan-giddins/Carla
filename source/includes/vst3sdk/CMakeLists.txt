@@ -56,7 +56,7 @@ elseif(WIN)
 	add_compile_options(/fp:fast)
 	add_compile_options($<$<CONFIG:Release>:/Oi>)	# Enable Intrinsic Functions (Yes)
 	add_compile_options($<$<CONFIG:Release>:/Ot>)	# Favor Size Or Speed (Favor fast code)
-	#add_compile_options($<$<CONFIG:Release>:/Ox>)	# Optimization (/O2: Maximise Speed /0x: Full Optimization)
+	add_compile_options($<$<CONFIG:Release>:/Ox>)	# Optimization (/O2: Maximise Speed /0x: Full Optimization)
 	add_compile_options($<$<CONFIG:Release>:/GF>)	# Enable String Pooling
 	add_compile_options($<$<CONFIG:Release>:/EHa>)	# Enable C++ Exceptions
 	add_compile_options($<$<CONFIG:Release>:/Oy>)	# Omit Frame Pointers
